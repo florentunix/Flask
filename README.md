@@ -38,13 +38,27 @@ pip install flask
 
 ```python
 #!/usr/bin/python3
+# Creation de notre premier serveur FLask
+
+# Importer Flask depuis la librairie flask
 from flask import Flask
+
+# Creation d'une instance de l'objet Flask 
 app = Flask(__name__)
+
+# Activer l'option de débogage
+app.config["DEBUG"] = True
+
+# Declarer une route et la fonction a executer si cette route est demandée.
 @app.route('/')
 def hello():
-  return 'Hello, World :)'  
+  # La ligne ci-dessous permet de renvoyer un résultat à l'utilisateur
+  return 'Hello, World :)'
+
 if __name__ == '__main__':
+    # Démarrer notre serveur et le faire ecouter sur toutes ses adresses sur le port 8080
     app.run(host='0.0.0.0', port=8080)
+
 ```
 Copier les lignes ci-dessus et coller dans le fichier `HelloWorld.py`
 
@@ -56,4 +70,4 @@ Il ne reste plus qu'a démarrer notre serveur WEB
 python ./HelloWorld.py
 ```
 ## Deploiement du serveur en production
-Notre serveur WEB est en mode développement, pour déployer notre serveur en production visiter la [documentation](https://flask.palletsprojects.com/en/2.1.x/deploying/) de Flask. 
+Notre serveur WEB est en mode développement, pour déployer notre serveur en production visiter la [documentation](https://flask.palletsprojects.com/en/2.1.x/deploying/) de Flask.
