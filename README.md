@@ -9,7 +9,7 @@ sudo apt install python3 -y
 ```
 ### virtualenv
 ```bash
-sudo apt install python3-virtualenv -y
+sudo apt install python3-virtualenv -y -y
 ```
 
 ## Environnement virtuel
