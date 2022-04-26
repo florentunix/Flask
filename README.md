@@ -1,5 +1,5 @@
 # Flask
-`FLask` est un framework python qui facilite la création d'application web en python ainsi que des API.
+`FLask` est un framework python qui facilite la création d'application web, et API en python.
 
 ## Dependances à installer
 
@@ -17,7 +17,7 @@ Une fois les paquets installer, il faut créer un environnement de développemen
 
 ### Creation d'un environement python
 ```bash
-virtualenv env
+python3 -m venv env
 ```
 
 `env` est le nom de répertoire de notre environnement.
@@ -46,3 +46,14 @@ def hello():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
 ```
+Copier les lignes ci-dessus et coller dans le fichier `HelloWorld.py`
+
+## Demarrage du serveur
+
+Il ne reste plus qu'a démarrer notre serveur WEB
+
+```bash
+python ./HelloWorld.py
+```
+## Deploiement du serveur en production
+Notre serveur WEB est en mode développement, pour déployer notre serveur en production visiter la [documentation](https://flask.palletsprojects.com/en/2.1.x/deploying/) de Flask. 
